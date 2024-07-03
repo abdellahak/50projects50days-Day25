@@ -9,16 +9,36 @@
   font-family: "Rubik";
 }
 
+.header{
+  position: fixed;
+  width: 100%;
+  background-color: #2c3e50;
+  height: fit-content;
+}
+.nav{
+  width: 100%;
+  padding:20px 40px ;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.nav a{
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
 
 header{
-  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline:40px;
   height: 70px;
-  background-color: #2c3e50;
   transition: height 0.3s linear;
 }
 header > a{
@@ -75,6 +95,8 @@ main {
   color: white;
   gap: 30px;
   position: relative;
+  text-align: center;
+  padding: 20px;
   z-index: -2;
 }
 main::before{
@@ -102,4 +124,13 @@ section p{
   font-size: 1.1rem;
   color: gray;
   line-height: 2rem;
+}
+
+@media screen and (max-width:600px){
+  nav{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
 }
